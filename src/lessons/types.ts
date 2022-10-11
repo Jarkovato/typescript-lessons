@@ -8,7 +8,8 @@ const array: number[] = [1, 1, 2, 3, 5, 8, 13];
 const array2: Array<number> = [1, 1, 2, 3, 5, 8, 13]; //generic
 const array3: string[] = ["hi", "man"];
 //typle
-const array4: [string, number] = ["2", 1];
+const array4: [string, number] = ["2", 1]; // tuples
+const array5: [string, number, ...boolean[]] = ["2", 1]; // spread types in tuples
 //any
 let variable: any = 42;
 variable = "new String";
