@@ -7,12 +7,17 @@ const float: number = 4.2;
 const array: number[] = [1, 1, 2, 3, 5, 8, 13];
 const array2: Array<number> = [1, 1, 2, 3, 5, 8, 13]; //generic
 const array3: string[] = ["hi", "man"];
-//typle
-const array4: [string, number] = ["2", 1]; // tuples
+//tuple
+const array4: [string, number] = ["2", 1]; 
 const array5: [string, number, ...boolean[]] = ["2", 1]; // spread types in tuples
+//readonly 
+const array6: readonly [string, number] = ["2", 1];
+
+
 //any
 let variable: any = 42;
 variable = "new String";
+//readonly 
 
 //functions
 //void - function not return result
