@@ -1,8 +1,25 @@
 function strip(x: string | number) {
   if (typeof x === "number") {
-    return x.toFixed(2);
-  } else return x.trim();
+    return x.toFixed(2); //number
+  } else return x.trim(); //string
 }
+
+// object key check
+function logObject(obj: { a: number } | { b: number }) {
+  if ('a' in obj) {
+    //do something with obj.a
+  }
+}
+
+function logMultipleIds(a: string | number, b: string | boolean) {
+  if (a === b) {
+    // a, b - strings
+  } else {
+    //check type
+  }
+}
+
+
 //
 class MyResponse {
   header = "response header";

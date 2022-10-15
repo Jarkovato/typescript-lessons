@@ -1,3 +1,4 @@
+const a = 1; // type is 1
 const str: string = "Hello";
 const isFetchinf: boolean = true;
 const int: number = 42;
@@ -17,13 +18,16 @@ const array6: readonly [string, number] = ["2", 1];
 //any
 let variable: any = 42;
 variable = "new String";
-//readonly 
 
 //functions
 //void - function not return result
 function sayMyName(name: string): void {
-  console.log(name);
+  // console.log(name);
 }
+
+//union
+let union: string | number | boolean = 0;
+
 
 //Never
 function throwError(message: string): never {
