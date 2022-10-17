@@ -1,19 +1,22 @@
 const a = 1; // type is 1
+let b = 1; // type is number, because it's not constant
 const str: string = "Hello";
 const isFetchinf: boolean = true;
 const int: number = 42;
 const num: number = 3e10;
 const float: number = 4.2;
+
 //array
 const array: number[] = [1, 1, 2, 3, 5, 8, 13];
 const array2: Array<number> = [1, 1, 2, 3, 5, 8, 13]; //generic
 const array3: string[] = ["hi", "man"];
+
 //tuple
-const array4: [string, number] = ["2", 1]; 
+const array4: [string, number] = ["2", 1];
 const array5: [string, number, ...boolean[]] = ["2", 1]; // spread types in tuples
+
 //readonly 
 const array6: readonly [string, number] = ["2", 1];
-
 
 //any
 let variable: any = 42;
@@ -27,7 +30,6 @@ function sayMyName(name: string): void {
 
 //union
 let union: string | number | boolean = 0;
-
 
 //Never
 function throwError(message: string): never {
@@ -44,3 +46,9 @@ type ID = string | number;
 const id1: ID = 'STRING';
 const id2: ID = 1;
 
+//Literal types
+let method: 'post' | 'get';
+let statusCode: 200 | 500;
+
+//Cast method (Warning)
+// method as 'post'
