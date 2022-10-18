@@ -46,6 +46,20 @@ type ID = string | number;
 const id1: ID = 'STRING';
 const id2: ID = 1;
 
+// intersection
+
+type UserType = {
+  name: string;
+}
+type Role = {
+  id: number
+}
+type UserWithRole = UserType & Role;
+let userWithRole: UserWithRole = {
+  name: 'admin',
+  id: 1
+}
+
 //Literal types
 let method: 'post' | 'get';
 let statusCode: 200 | 500;
