@@ -20,11 +20,12 @@ const rect3 = {} as Rect;
 const rect4 = <Rect>{};
 
 //inheritance
-
+// we can inherit more Interfaces extends Rect, Triangle and more
 interface RectWithArea extends Rect {
   getArea: () => number;
 }
 
+//function
 const rect5: RectWithArea = {
   id: "123",
   size: {
@@ -49,7 +50,7 @@ class CLock implements IClock {
     this.time = date;
   }
 }
-//
+// key acces
 interface Styles {
   [key: string]: string;
 }
