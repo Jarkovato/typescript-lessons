@@ -60,3 +60,13 @@ const css: Styles = {
   marginTop: "2px",
   borderRadius: "5px",
 };
+
+//merge interface
+// we can merge if we have interface from not ours library
+interface Man {
+  age: string;
+}
+interface Man {
+  name: string;
+}
+// it works
