@@ -70,3 +70,22 @@ interface Man {
   name: string;
 }
 // it works
+
+interface Admin {
+  login: string;
+  role?: {
+    type: 'write' | 'delete'
+  }
+}
+
+// !
+function checkAdmin(admin: Admin) {
+  const role = admin.role!.type;
+  // ! means we are sure there will be some value
+  return role;
+}
+
+// nullish coalescing
+function test(param?: string) {
+  return param ?? 'param is nullish';
+}
