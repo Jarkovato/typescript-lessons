@@ -25,4 +25,13 @@ function position(a?: number, b?: number) {
   if (a && !b) return { x: a, y: undefined, default: a.toString() };
   return { x: a, y: b };
 }
-console.log(position(42, 32))
+
+// void
+function logId(id: string): void {
+  console.log(id);
+}
+
+type voidFunc = () => void;
+const f1: voidFunc = () => true;
+//it works! but it always return void
+

@@ -1,3 +1,4 @@
+import fetch from "node-fetch";
 interface IReq {
   topicId: number;
   status: ReqStatus;
@@ -17,7 +18,7 @@ interface IResItem {
   status: ReqStatus;
 }
 
-async function getFags(req: IReq): Promise<IResItem[]> {
+async function getFags(req: IReq): Promise<unknown> {
   const res = await fetch('/fags', {
     method: 'POST',
     body: JSON.stringify(req),
