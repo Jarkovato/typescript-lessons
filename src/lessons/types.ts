@@ -66,3 +66,21 @@ let statusCode: 200 | 500;
 
 //Cast method (Warning)
 // method as 'post'
+
+//Unknown
+//like any
+let input: unknown;
+input = 3;
+input = 'input'
+// we cant make type to res. only unknown or any
+let res = input;
+// we must check type of unknown arguments
+function run(i: unknown): number | undefined {
+  if (typeof i === 'number') {
+    return i++;
+  }
+}
+// union
+type U1 = unknown | number; // unknown
+// intesection
+type I1 = unknown & string; // string
