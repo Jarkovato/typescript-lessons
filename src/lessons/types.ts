@@ -32,9 +32,22 @@ function sayMyName(name: string): void {
 let union: string | number | boolean = 0;
 
 //Never
+// A function never returns 
 function throwError(message: string): never {
   throw new Error(message);
 }
+
+function dumpError(): never {
+  while (true) { }
+}
+
+function rec(): never {
+  return rec();
+}
+
+//example
+//switch - case - default : never (if code never gone to default)
+
 
 // Type
 //Alias, named type
