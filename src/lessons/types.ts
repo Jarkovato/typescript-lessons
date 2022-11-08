@@ -97,3 +97,7 @@ function run(i: unknown): number | undefined {
 type U1 = unknown | number; // unknown
 // intesection
 type I1 = unknown & string; // string
+
+// Null
+const n: null = null;
+// StrictNullChecks - false / true - 
