@@ -101,3 +101,10 @@ type I1 = unknown & string; // string
 // Null
 const n: null = null;
 // StrictNullChecks - false / true - 
+
+// Type guidance
+
+//this syntax not used in JSX
+const user = <User>{
+  name: 'User'
+}
