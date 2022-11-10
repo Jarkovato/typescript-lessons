@@ -6,7 +6,7 @@ function strip(x: string | number) {
 
 // object key check
 function logObject(obj: { a: number } | { b: number }) {
-  if ('a' in obj) {
+  if ("a" in obj) {
     //do something with obj.a
   }
 }
@@ -18,7 +18,6 @@ function logMultipleIds(a: string | number, b: string | boolean) {
     //check type
   }
 }
-
 
 //
 class MyResponse {
@@ -49,6 +48,16 @@ type AlertType = "succes" | "danger" | "warning";
 function setAlertType(type: AlertType) {
   //...
 }
-setAlertType('succes')
-setAlertType('danger')
-setAlertType('warning')
+setAlertType("succes");
+setAlertType("danger");
+setAlertType("warning");
+
+// type guard function
+function isStringGuard(x: string | number): x is string {
+  return typeof x === "string";
+}
+
+function isAdmin(user: Admin | User): user is Admin {
+  return "role" in user;
+  // return (user as Admin).role !== undefined;   //alt
+}
