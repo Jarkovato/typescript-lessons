@@ -1,14 +1,24 @@
 class Typescript {
-  version: string;
-
-  constructor(version: string) {
-    this.version = version;
+  version: number;
+  author: string;
+  // overload
+  constructor();
+  constructor(version: number);
+  constructor(author: string);
+  constructor(versionOrAuthor?: number | string) {
+    if (typeof versionOrAuthor === "number") {
+      this.version = versionOrAuthor;
+    }
   }
 
-  info(name: string) {
+  info(name: string): string {
     return `[${name}]: Typescript version is ${this.version}`;
   }
 }
+
+const ts0 = new Typescript();
+const ts1 = new Typescript(0);
+const ts2 = new Typescript("Me");
 
 class Car {
   readonly model: string;
@@ -55,3 +65,11 @@ class AppComponent extends Component {
     return "info";
   }
 }
+
+// not initialized property
+class Admin {
+  role?: string;
+}
+
+const admin = new Admin();
+admin.role = "master";
