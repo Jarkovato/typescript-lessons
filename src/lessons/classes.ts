@@ -73,3 +73,41 @@ class Admin {
 
 const admin = new Admin();
 admin.role = "master";
+
+// get/set
+
+class Client {
+  _login: string;
+  password: string
+
+  get login(): string {
+    return this._login;
+  }
+
+  set login(login: string) {
+    this._login = login;
+  }
+}
+
+// implement with interface
+interface ILogger {
+  log(record: string): void;
+  error(error: string): void;
+}
+
+interface IDeletable {
+  delete(): void;
+}
+
+class Logger implements ILogger, IDeletable {
+  log(record: string): void {
+    console.log(record);
+  }
+  error(error: string): void {
+    throw new Error(error);
+  }
+
+  delete(): void {
+    // delete action
+  }
+}
