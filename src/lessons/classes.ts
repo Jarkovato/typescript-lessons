@@ -36,9 +36,13 @@ class Cars {
 
 //modificators - protected, public, private
 class Animal {
-  protected voice: string = "";
   public color: string = "black";
+  // protected aviable in extends classes
+  protected voice: string = "";
+  // private aviable only in parent class
   private type: string = "general";
+  #private: number;
+  // clear private js
 
   go(): void {
     console.log("go");
