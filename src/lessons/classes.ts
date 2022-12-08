@@ -157,3 +157,24 @@ class ClientWithPayment {
     this.payment = payment;
   }
 }
+
+// static
+class UserService {
+  static db: any;
+  static getUser(id: number) {
+    return this.db.findById(id)
+  }
+  // static block
+  // we cant use async functions in static block
+  static {
+    UserService.db = null;
+  }
+  
+  static async fetchUser(url: string) {
+    // return await fetch(url);
+  }
+}
+
+UserService.db; // we can get static property without instance
+UserService.getUser(1); // we can get static method without instance
+
