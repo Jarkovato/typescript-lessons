@@ -162,14 +162,14 @@ class ClientWithPayment {
 class UserService {
   static db: any;
   static getUser(id: number) {
-    return this.db.findById(id)
+    return this.db.findById(id);
   }
   // static block
   // we cant use async functions in static block
   static {
     UserService.db = null;
   }
-  
+
   static async fetchUser(url: string) {
     // return await fetch(url);
   }
@@ -177,4 +177,19 @@ class UserService {
 
 UserService.db; // we can get static property without instance
 UserService.getUser(1); // we can get static method without instance
+
+// abstract Classes
+// cant be instanced
+abstract class Controller {
+  abstract handle(req: any): void;
+}
+
+// new Controller (error);
+class UserController extends Controller {
+  handle(req: any): void {
+    console.log(req);
+  };
+}
+
+// new UserController (OK);
 
