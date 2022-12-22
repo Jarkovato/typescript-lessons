@@ -188,8 +188,16 @@ abstract class Controller {
 class UserController extends Controller {
   handle(req: any): void {
     console.log(req);
-  };
+  }
 }
 
 // new UserController (OK);
 
+class PublicVariables {
+  constructor(public name) {}
+  // it is similar with 
+  // name: string;
+  // constructor(name: string) {
+  //   this.name = name;
+  // }
+}

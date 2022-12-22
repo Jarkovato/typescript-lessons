@@ -126,3 +126,5 @@ class Card {
     return { success: true };
   }
 }
+
+export default Product;

@@ -6,3 +6,10 @@ function reverse<T>(array: T[]): T[] {
 }
 
 reverse(arrayOfNumbers);
+
+const str = new Promise<string>((res, rej) => res("test"));
+
+const check: Record<string, boolean> = {
+  drive: true,
+  kpp: false,
+};

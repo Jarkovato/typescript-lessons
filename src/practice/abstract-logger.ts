@@ -16,3 +16,5 @@ class ExtendedLogger extends AbsctractLogger {
     this.printDate();
   }
 }
+
+export default ExtendedLogger;

@@ -76,7 +76,7 @@
   // include part of files for compile
   // "include": ["*.ts"],
   // exclude part of files for compile
-  "exclude": ["./src/lessons"]
+  "exclude": ["./src/lessons", "dist", "node_modules"]
   // extend tsconfig
   // "extends": ""
 }
