@@ -13,3 +13,21 @@ const check: Record<string, boolean> = {
   drive: true,
   kpp: false,
 };
+
+
+function logMiddleware<T>(data: T): T {
+  console.log(data);
+  return data;
+}
+
+const res = logMiddleware<string>('10');
+// res: string
+const res2 = logMiddleware<number>(10);
+// res: number
+
+function getSplittedArr<T>(arr: Array<T>): Array<T> {
+  return arr.splice(0, arr.length / 2);
+}
+
+getSplittedArr([1,2,3]);
+// number[]
