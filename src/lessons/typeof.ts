@@ -1,7 +1,7 @@
 let strOrNum: string | number;
 let strOrNum2: typeof strOrNum;
 
-const user = {
+export const user = {
   name: 'Anton',
   age: '31'
 }
